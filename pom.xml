@@ -1,0 +1,163 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.appium.practice</groupId>
+  <artifactId>Appium</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>Appium</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <poi.version>4.1.2</poi.version>
+  </properties>
+
+ <dependencies>
+   <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+   <dependency>
+      <groupId>io.appium</groupId>
+    <artifactId>java-client</artifactId>
+    <version>7.3.0</version>
+   </dependency>
+   
+   <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13</version>
+   </dependency>
+   
+   <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-server</artifactId>
+      <version>3.141.59</version>
+   </dependency>
+   
+   
+   <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+      <version>2.6</version>
+   </dependency>
+   <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.10</version>
+   </dependency>
+   <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>7.1.0</version>
+   </dependency>
+   <dependency>
+      <groupId>org.uncommons</groupId>
+      <artifactId>reportng</artifactId>
+      <version>1.1.4</version>
+   </dependency>
+   
+   <!-- https://mvnrepository.com/artifact/org.bytedeco.javacpp-presets/opencv -->
+<dependency>
+    <groupId>org.bytedeco.javacpp-presets</groupId>
+    <artifactId>opencv</artifactId>
+    <version>4.0.1-1.4.4</version>
+</dependency>
+   <!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
+<dependency>
+    <groupId>net.sourceforge.tess4j</groupId>
+    <artifactId>tess4j</artifactId>
+    <version>4.5.1</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>${poi.version}</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>${poi.version}</version>
+</dependency>
+
+
+
+<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.6</version>
+</dependency>
+
+   
+      <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+<dependency>
+    <groupId>com.google.guava</groupId>
+    <artifactId>guava</artifactId>
+    <version>23.0</version>
+</dependency>
+   
+  
+   
+  <!--  -->  
+   
+   
+  <!-- https://mvnrepository.com/artifact/org.bytedeco.javacpp-presets/tesseract -->
+<dependency>
+    <groupId>org.bytedeco.javacpp-presets</groupId>
+    <artifactId>tesseract</artifactId>
+    <version>4.0.0-1.4.4</version>
+</dependency>
+   
+   <dependency>
+    <groupId>org.bytedeco.javacpp-presets</groupId>
+    <artifactId>leptonica</artifactId>
+    <version>1.77.0-1.4.4</version> 
+</dependency>
+   
+<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>4.1.5</version>
+		</dependency>   
+   
+</dependencies>
+
+<build>
+<pluginManagement>
+<plugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-surefire-plugin</artifactId>
+<version>2.18.1</version>
+<configuration>
+<suiteXmlFiles>
+<suiteXmlFile>testng.xml</suiteXmlFile>
+</suiteXmlFiles>
+</configuration>
+</plugin>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-failsafe-plugin</artifactId>
+<version>2.18.1</version>
+ 
+</plugin>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-compiler-plugin</artifactId>
+<configuration>
+<source>1.7</source>
+<target>1.7</target>
+<encoding>UTF-8</encoding>
+</configuration>
+</plugin>
+<plugin>
+<groupId>org.eclipse.jetty</groupId>
+<artifactId>jetty-maven-plugin</artifactId>
+<version>9.2.11-SNAPSHOT</version>
+</plugin>
+</plugins>
+</pluginManagement>
+</build>
+
+
+</project>
