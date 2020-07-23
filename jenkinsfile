@@ -5,12 +5,7 @@ node{
   stage('Compile-Package'){
     echo "Hello world"
     def mvnHome = tool name: 'Maven-3.6.3', type: 'maven'
-    cd ..
-    cd ..
-    cd ..
-    cd apache-maven-3.6.3
-    cd bin
-    mvn -f c:\Jenkins\workspace\App_Launch_close\pom.xml clean test
+    bat run.bat
     //bat "mvn clean test"
     //sh "${mvnHome}/bin/mvn package"
    // sh 'mvn package'
