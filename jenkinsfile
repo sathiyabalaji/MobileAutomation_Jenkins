@@ -6,7 +6,6 @@ node{
     echo "Hello world"
     def mvnHome = tool name: 'Maven-3.6.3', type: 'maven'
     bat """
-    //"{MAVEN_HOME}/mvn" clean test
     mvn clean test
     """
     //sh "${mvnHome}/bin/mvn package"
